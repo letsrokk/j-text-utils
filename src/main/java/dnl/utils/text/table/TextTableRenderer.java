@@ -1,12 +1,12 @@
 package dnl.utils.text.table;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.io.Writer;
 
 import javax.swing.table.TableModel;
-
-import org.apache.commons.lang.StringUtils;
 
 public class TextTableRenderer implements TableRenderer {
 
