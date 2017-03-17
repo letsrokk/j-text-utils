@@ -6,7 +6,7 @@
 	<packaging>jar</packaging>
 	<version>0.3.3</version>
 	<name>Java Text Utilities</name>
-	<url>http://code.google.com/p/j-text-utils</url>
+	<url>https://github.com/letsrokk/j-text-utils</url>
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
