@@ -7,10 +7,9 @@ import java.io.Writer;
 
 import javax.swing.table.TableModel;
 
+import com.opencsv.CSVWriter;
 import dnl.utils.text.table.TableRenderer;
 import dnl.utils.text.table.TextTable;
-
-import au.com.bytecode.opencsv.CSVWriter;
 
 public class CsvTableRenderer implements TableRenderer {
 

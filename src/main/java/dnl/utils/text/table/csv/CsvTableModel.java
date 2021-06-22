@@ -10,7 +10,8 @@ import java.util.List;
 
 import javax.swing.table.AbstractTableModel;
 
-import au.com.bytecode.opencsv.CSVReader;
+import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvValidationException;
 
 /**
  * 
@@ -22,15 +23,15 @@ public class CsvTableModel extends AbstractTableModel {
 	private String[] columnNames;
 	private List<String[]> lines = new ArrayList<>();
 
-	public CsvTableModel(File csvFile) throws IOException {
+	public CsvTableModel(File csvFile) throws IOException, CsvValidationException {
 		this(new FileReader(csvFile));
 	}
 
-	public CsvTableModel(String csvString) throws IOException {
+	public CsvTableModel(String csvString) throws IOException, CsvValidationException {
 		this(new StringReader(csvString));
 	}
 
-	public CsvTableModel(Reader reader) throws IOException {
+	public CsvTableModel(Reader reader) throws CsvValidationException, IOException {
 		try (CSVReader csvReader = new CSVReader(reader)) {
 			String[] line = null;
 			boolean first = true;
